@@ -34,13 +34,13 @@ def on_press(event):
 
 if __name__ == '__main__':
     # !!Change paths to your local machine!!
-    annotations_file = '/home/dl/1TB-Volumn/MSCOCO2017/annotations/instances_train2017.json'
-    labels_target_folder = '/home/dl/PycharmProjects/coco2voc-master/output'
-    data_folder = '/home/dl/1TB-Volumn/MSCOCO2017/train2017'
+    annotations_file = '/data1/qilei_chen/DATA/erosive/annotations/test.json'
+    labels_target_folder = '/data1/qilei_chen/DATA/erosive/segmentation/test/'
+    data_folder = '/data1/qilei_chen/DATA/erosive/images'
 
 
     # Convert n=25 annotations
-    coco2voc(annotations_file, labels_target_folder, n=25, compress=True)
+    coco2voc(annotations_file, labels_target_folder, compress=True)
 
     # Load an image with it's id segmentation and show
     coco = COCO(annotations_file)
