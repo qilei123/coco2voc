@@ -37,6 +37,9 @@ def annToRLE(ann, h, w):
     if type(segm) == list:
         # polygon -- a single object might consist of multiple parts
         # we merge all parts into one mask rle code
+        print(segm)
+        print(h)
+        print(w)
         rles = maskUtils.frPyObjects(segm, h, w)
         rle = maskUtils.merge(rles)
     elif type(segm['counts']) == list:
